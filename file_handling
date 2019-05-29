@@ -1,0 +1,11 @@
+# mount google drive
+from google.colab import drive
+drive.mount(‘/content/drive’, force_remount=True)
+
+#load local file
+from google.colab import files
+files.upload()
+
+#edit file
+!cat /content/models/research/object_detection/dataset_tools/create_pet_tf_record.py
+%%writefile /content/models/research/object_detection/dataset_tools/create_pet_tf_record.py
